@@ -1,1 +1,1 @@
-# This app developed by B Sittikorn
+# This app developed by sittikorn
