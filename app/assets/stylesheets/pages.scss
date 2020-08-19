@@ -1,3 +1,18 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    font-weight: 400;
+    font-style: normal;
+    src: font-url('notosansthaiui/notosansthaiui-regular-webfont.eot');
+    src: font-url('notosansthaiui/notosansthaiui-regular-webfont.eot#iefix') format('embedded-opentype'),
+         font-url('notosansthaiui/notosansthaiui-regular-webfont.woff2') format('woff2'),
+         font-url('notosansthaiui/notosansthaiui-regular-webfont.woff') format('woff'),
+         font-url('notosansthaiui/notosansthaiui-regular-webfont.ttf') format('truetype');
+}
+
+* {
+    font-family: "Noto Sans Thai", "Noto Sans", "Roboto" !important;
+}
