@@ -1,0 +1,7 @@
+<h1 class="text-center mt-4"><%= @user.username %></h1>
+
+<%= gravatar @user, size: 150 %>
+
+<h3 class="text-center mt-4">บทความทั้งหมดของคุณ</h3>
+
+<%= render 'articles/article' %>
