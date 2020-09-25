@@ -18,10 +18,12 @@
                         </h5>
                         <p class="card-text"><%= pluralize(user.articles.count, "article") %></p>
                         <%= link_to "ดูข้อมูล", user, class: "btn btn-outline-success" %>
-                        <%= link_to "แก้ไขข้อมูล", edit_user_path(user), class: "btn btn-outline-warning" %>
+                        <% if logged_in? && user == current_user %>
+                            <%= link_to "แก้ไขข้อมูล", edit_user_path(user), class: "btn btn-outline-warning" %>
+                        <% end %>
                     </div>
                     <div class="card-footer text-muted">
-                        <small>เข้าร่วมเมื่อ <%= time_ago_in_words(user.created_at) %> ที่เเล้ว</small>
+                        <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small>
                     </div>
                 </div>
             </div>
