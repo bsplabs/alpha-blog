@@ -18,8 +18,14 @@
                         </h5>
                         <p class="card-text"><%= pluralize(user.articles.count, "article") %></p>
                         <%= link_to "ดูข้อมูล", user, class: "btn btn-outline-success" %>
-                        <% if logged_in? && user == current_user %>
-                            <%= link_to "แก้ไขข้อมูล", edit_user_path(user), class: "btn btn-outline-warning" %>
+                        <% if logged_in? %> 
+                            <% if user == current_user %>
+                                <%= link_to "แก้ไขข้อมูล", edit_user_path(user), class: "btn btn-outline-warning" %>
+                            <% end %>
+
+                            <% if current_user.admin? %>
+                               <%= link_to "ลบผู้ใช้งาน", user_path(user), class: "btn btn-outline-danger", method: :delete, data: {confirm: "คุณเเน่ใจว่าจะลบบัญชีผและบทความของผู้ใช้นี้ ใช่หรือไม่?"} %> 
+                            <% end %>
                         <% end %>
                     </div>
                     <div class="card-footer text-muted">
